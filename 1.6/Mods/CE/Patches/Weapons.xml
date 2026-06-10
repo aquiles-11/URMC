@@ -31,19 +31,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>
-			Defs/ThingDef[
-			defName="pphhyy_M43PulseRifle" or
-			defName="pphhyy_M45PulseLMG" or
-			defName="pphhyy_M44FImmolator" or
-			defName="pphhyy_M80GLMachine" or
-			defName="pphhyy_M50XReconRifle" or
-			defName="pphhyy_M52HBreachingShotgun" or
-			defName="pphhyy_M47PulseSMG" or
-			defName="pphhyy_AnvilLMG" or
-			defName="pphhyy_AnvilRifle" or
-			defName="pphhyy_IntelligentFirearm" or
-			defName="pphhyy_M46HeavyPulseRifle"
+		<xpath> Defs/ThingDef[ defName="pphhyy_M43PulseRifle" or defName="pphhyy_M45PulseLMG" or defName="pphhyy_M44FImmolator" or defName="pphhyy_M80GLMachine" or defName="pphhyy_M50XReconRifle" or defName="pphhyy_M52HBreachingShotgun" or defName="pphhyy_M47PulseSMG" or defName="pphhyy_AnvilLMG" or defName="pphhyy_AnvilRifle" or defName="pphhyy_IntelligentFirearm" or defName="pphhyy_M46HeavyPulseRifle"
 			]/tools
 		</xpath>
 		<value>
@@ -179,8 +167,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>
-			Defs/ThingDef[defName="pphhyy_M43PulseRifle"]/comps/li[@Class="CompProperties_EquippableAbilityReloadable"]</xpath>
+		<xpath> Defs/ThingDef[defName="pphhyy_M43PulseRifle"]/comps/li[@Class="CompProperties_EquippableAbilityReloadable"]</xpath>
 		<value>
 			<li Class="CombatExtended.CompProperties_UnderBarrel">
 				<standardLabel>switch to rifle</standardLabel>
@@ -539,7 +526,7 @@
 		</value>
 	</Operation>
 
-<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>pphhyy_M47PulseSMG</defName>
 		<statBases>
 			<Mass>3.5</Mass>
@@ -584,7 +571,7 @@
 		<AllowWithRunAndGun>false</AllowWithRunAndGun>
 	</Operation>
 
-<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>pphhyy_M46HeavyPulseRifle</defName>
 		<statBases>
 			<Mass>8.5</Mass>
@@ -628,7 +615,7 @@
 		<AllowWithRunAndGun>false</AllowWithRunAndGun>
 	</Operation>
 
-<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>pphhyy_IntelligentFirearm</defName>
 		<statBases>
 			<Mass>7.5</Mass>
@@ -672,7 +659,7 @@
 		<AllowWithRunAndGun>false</AllowWithRunAndGun>
 	</Operation>
 
-<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>pphhyy_AnvilRifle</defName>
 		<statBases>
 			<Mass>6.5</Mass>
@@ -716,7 +703,7 @@
 		<AllowWithRunAndGun>false</AllowWithRunAndGun>
 	</Operation>
 
-<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>pphhyy_AnvilLMG</defName>
 		<statBases>
 			<Mass>8.5</Mass>
@@ -759,6 +746,1294 @@
 			<li>Bipod_LMG</li>
 		</weaponTags>
 		<AllowWithRunAndGun>false</AllowWithRunAndGun>
+	</Operation>
+
+	<!-- Raider Weapons -->
+
+	<!-- Hewer MKI -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_HewerMKI"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>20</power>
+					<cooldownTime>1.78</cooldownTime>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>edge</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>30</power>
+					<cooldownTime>1.64</cooldownTime>
+					<armorPenetrationBlunt>3.24</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.72</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_HewerMKI"]/statBases</xpath>
+		<value>
+			<Bulk>8</Bulk>
+			<MeleeCounterParryBonus>0.8</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_HewerMKI"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.4</MeleeCritChance>
+				<MeleeParryChance>0.4</MeleeParryChance>
+				<MeleeDodgeChance>0.3</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Hewer MKII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_HewerMKII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>22</power>
+					<cooldownTime>1.78</cooldownTime>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>edge</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>32</power>
+					<cooldownTime>1.64</cooldownTime>
+					<armorPenetrationBlunt>3.24</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.72</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_HewerMKII"]/statBases</xpath>
+		<value>
+			<Bulk>8</Bulk>
+			<MeleeCounterParryBonus>0.8</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_HewerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.42</MeleeCritChance>
+				<MeleeParryChance>0.42</MeleeParryChance>
+				<MeleeDodgeChance>0.33</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Hewer MKIII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_HewerMKIII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>1.78</cooldownTime>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>edge</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>33</power>
+					<cooldownTime>1.64</cooldownTime>
+					<armorPenetrationBlunt>3.24</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.72</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_HewerMKII"]/statBases</xpath>
+		<value>
+			<Bulk>8</Bulk>
+			<MeleeCounterParryBonus>0.8</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_HewerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.45</MeleeCritChance>
+				<MeleeParryChance>0.45</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Arcstrike -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_Arcstrike"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>27</power>
+					<cooldownTime>1.78</cooldownTime>
+					<extraMeleeDamages>
+						<li>
+							<def>EMP</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>3.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>edge</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>37</power>
+					<cooldownTime>1.8</cooldownTime>
+					<extraMeleeDamages>
+						<li>
+							<def>EMP</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+					<armorPenetrationBlunt>6.24</armorPenetrationBlunt>
+					<armorPenetrationSharp>4.72</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_Arcstrike"]/statBases</xpath>
+		<value>
+			<Bulk>8</Bulk>
+			<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_Arcstrike"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.5</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Chopper MKI -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChopperMKI"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>22</power>
+					<cooldownTime>2.3</cooldownTime>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>31</power>
+					<cooldownTime>2.3</cooldownTime>
+					<armorPenetrationBlunt>3.24</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.72</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChopperMKI"]/statBases</xpath>
+		<value>
+			<Bulk>8</Bulk>
+			<MeleeCounterParryBonus>0.7</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChopperMKI"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.35</MeleeCritChance>
+				<MeleeParryChance>0.35</MeleeParryChance>
+				<MeleeDodgeChance>0.3</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!--  Chopper MKII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChopperMKII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>2.3</cooldownTime>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>32</power>
+					<cooldownTime>2.3</cooldownTime>
+					<armorPenetrationBlunt>3.24</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.72</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChopperMKII"]/statBases</xpath>
+		<value>
+			<Bulk>8</Bulk>
+			<MeleeCounterParryBonus>0.8</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChopperMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.42</MeleeCritChance>
+				<MeleeParryChance>0.42</MeleeParryChance>
+				<MeleeDodgeChance>0.33</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Chopper MKIII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChopperMKIII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>25</power>
+					<cooldownTime>2.3</cooldownTime>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>36</power>
+					<cooldownTime>12.3</cooldownTime>
+					<armorPenetrationBlunt>3.24</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.72</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChopperMKII"]/statBases</xpath>
+		<value>
+			<Bulk>8</Bulk>
+			<MeleeCounterParryBonus>0.8</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChopperMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.45</MeleeCritChance>
+				<MeleeParryChance>0.45</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Hellraiser -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_Hellraiser"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>28</power>
+					<cooldownTime>2.2</cooldownTime>
+					<extraMeleeDamages>
+						<li>
+							<def>Flame</def>
+							<amount>10</amount>
+							<chance>0.5</chance>
+						</li>
+					</extraMeleeDamages>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>3.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>38</power>
+					<cooldownTime>2.2</cooldownTime>
+					<extraMeleeDamages>
+						<li>
+							<def>Flame</def>
+							<amount>10</amount>
+							<chance>0.5</chance>
+						</li>
+					</extraMeleeDamages>
+					<armorPenetrationBlunt>8.24</armorPenetrationBlunt>
+					<armorPenetrationSharp>4.72</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_Hellraiser"]/statBases</xpath>
+		<value>
+			<Bulk>8</Bulk>
+			<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_Hellraiser"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.5</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Breaker MKI -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_BreakerMKI"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>22</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_BreakerMKI"]/statBases</xpath>
+		<value>
+			<Bulk>10</Bulk>
+			<MeleeCounterParryBonus>0.7</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_BreakerMKI"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.35</MeleeCritChance>
+				<MeleeParryChance>0.35</MeleeParryChance>
+				<MeleeDodgeChance>0.3</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!--  Breaker MKII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_BreakerMKII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>25</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>5.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_BreakerMKII"]/statBases</xpath>
+		<value>
+			<Bulk>10</Bulk>
+			<MeleeCounterParryBonus>0.8</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_BreakerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.42</MeleeCritChance>
+				<MeleeParryChance>0.42</MeleeParryChance>
+				<MeleeDodgeChance>0.33</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Breaker MKIII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_BreakerMKIII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>28</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_BreakerMKII"]/statBases</xpath>
+		<value>
+			<Bulk>12</Bulk>
+			<MeleeCounterParryBonus>0.8</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_BreakerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.45</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Nuclear Hammer -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_NuclearHammer"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>pphhyy_ToxBlunt</li>
+					</capacities>
+					<power>33</power>
+					<cooldownTime>2.1</cooldownTime>
+					<armorPenetrationBlunt>6.5</armorPenetrationBlunt>
+					<armorPenetrationSharp>3.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_NuclearHammer"]/statBases</xpath>
+		<value>
+			<Bulk>13</Bulk>
+			<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_NuclearHammer"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.55</MeleeCritChance>
+				<MeleeParryChance>0.5</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Chucker MKI -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChuckerMKI"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>11</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>11</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChuckerMKI"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.35</MeleeCritChance>
+				<MeleeParryChance>0.35</MeleeParryChance>
+				<MeleeDodgeChance>0.3</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!--  Chucker MKII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChuckerMKII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChuckerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.42</MeleeCritChance>
+				<MeleeParryChance>0.42</MeleeParryChance>
+				<MeleeDodgeChance>0.33</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Chucker MKIII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChuckerMKIII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>14</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>14</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChuckerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.45</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+<!-- Boomlance -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_Boomlance"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_ChuckerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.52</MeleeCritChance>
+				<MeleeParryChance>0.47</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+<!-- Chucker 1 2 and 3 ranged -->
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>pphhyy_ChuckerMKI</defName>
+		<statBases>
+			<Mass>7</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+			<SightsEfficiency>1</SightsEfficiency>
+			<ShotSpread>0.07</ShotSpread>
+			<SwayFactor>1.33</SwayFactor>
+			<MeleeCounterParryBonus>0.8</MeleeCounterParryBonus>
+		</statBases>
+		<Properties>
+			<recoilAmount>0</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>pphhyy_ChuckerMKIProjectile</defaultProjectile>
+			<warmupTime>1.3</warmupTime>
+			<range>18</range>
+			<soundCast>Interact_BeatFire</soundCast>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		</Properties>
+		<FireModes>
+		</FireModes>
+	</Operation>
+
+<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>pphhyy_ChuckerMKII</defName>
+		<statBases>
+			<Mass>7</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+			<SightsEfficiency>1</SightsEfficiency>
+			<ShotSpread>0.07</ShotSpread>
+			<SwayFactor>1.33</SwayFactor>
+			<MeleeCounterParryBonus>0.8</MeleeCounterParryBonus>
+		</statBases>
+		<Properties>
+			<recoilAmount>0</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>pphhyy_ChuckerMKIIProjectile</defaultProjectile>
+			<warmupTime>1.3</warmupTime>
+			<range>18</range>
+			<soundCast>Interact_BeatFire</soundCast>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		</Properties>
+		<FireModes>
+		</FireModes>
+	</Operation>
+
+<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>pphhyy_ChuckerMKIII</defName>
+		<statBases>
+			<Mass>7</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+			<SightsEfficiency>1</SightsEfficiency>
+			<ShotSpread>0.07</ShotSpread>
+			<SwayFactor>1.33</SwayFactor>
+			<MeleeCounterParryBonus>0.8</MeleeCounterParryBonus>
+		</statBases>
+		<Properties>
+			<recoilAmount>0</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>pphhyy_ChuckerMKIIIProjectile</defaultProjectile>
+			<warmupTime>1.3</warmupTime>
+			<range>18</range>
+			<soundCast>Interact_BeatFire</soundCast>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		</Properties>
+		<FireModes>
+		</FireModes>
+	</Operation>
+
+ <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="pphhyy_ChuckerMKIProjectile"]/projectile</xpath>
+        <value>
+                <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                    <armorPenetrationSharp>8</armorPenetrationSharp>
+                    <armorPenetrationBlunt>6</armorPenetrationBlunt>
+                    <damageDef>RangedStab</damageDef>
+                    <damageAmountBase>25</damageAmountBase>
+                    <stoppingPower>2.5</stoppingPower>
+                    <speed>26</speed>
+                </projectile>
+        </value>
+    </Operation>
+
+ <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="pphhyy_ChuckerMKIIProjectile"]/projectile</xpath>
+        <value>
+                <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                    <armorPenetrationSharp>8</armorPenetrationSharp>
+                    <armorPenetrationBlunt>6</armorPenetrationBlunt>
+                    <damageDef>RangedStab</damageDef>
+                    <damageAmountBase>30</damageAmountBase>
+                    <stoppingPower>2.5</stoppingPower>
+                    <speed>26</speed>
+                </projectile>
+        </value>
+    </Operation>
+
+ <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="pphhyy_ChuckerMKIIIProjectile"]/projectile</xpath>
+        <value>
+                <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                    <armorPenetrationSharp>12</armorPenetrationSharp>
+                    <armorPenetrationBlunt>8</armorPenetrationBlunt>
+                    <damageDef>RangedStab</damageDef>
+                    <damageAmountBase>35</damageAmountBase>
+                    <stoppingPower>2.5</stoppingPower>
+                    <speed>26</speed>
+                </projectile>
+        </value>
+    </Operation>
+
+ <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="pphhyy_BoomlanceProjectile"]/projectile</xpath>
+        <value>
+                <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                    <armorPenetrationSharp>15</armorPenetrationSharp>
+                    <armorPenetrationBlunt>7</armorPenetrationBlunt>
+                    <damageDef>Bomb</damageDef>
+                    <damageAmountBase>40</damageAmountBase>
+                    <stoppingPower>2.5</stoppingPower>
+                    <speed>26</speed>
+                </projectile>
+        </value>
+    </Operation>
+
+<!-- StickChucker MKI -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_StickChuckerMKI"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>11</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>11</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_StickChuckerMKI"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.35</MeleeCritChance>
+				<MeleeParryChance>0.35</MeleeParryChance>
+				<MeleeDodgeChance>0.3</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!--  StickChucker MKII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_StickChuckerMKII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_StickChuckerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.42</MeleeCritChance>
+				<MeleeParryChance>0.42</MeleeParryChance>
+				<MeleeDodgeChance>0.33</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- StickChucker MKIII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_StickChuckerMKIII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>14</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>14</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_StickChuckerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.45</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+<!-- BoomChucker MKI -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_BoomChuckerMKI"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>11</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>11</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_BoomChuckerMKI"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.35</MeleeCritChance>
+				<MeleeParryChance>0.35</MeleeParryChance>
+				<MeleeDodgeChance>0.3</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!--  BoomChucker MKII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_BoomChuckerMKII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_BoomChuckerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.42</MeleeCritChance>
+				<MeleeParryChance>0.42</MeleeParryChance>
+				<MeleeDodgeChance>0.33</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- BoomChucker MKIII -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="pphhyy_BoomChuckerMKIII"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>14</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>0.10</chanceFactor>
+					<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>14</power>
+					<cooldownTime>2</cooldownTime>
+					<armorPenetrationBlunt>4.0</armorPenetrationBlunt>
+					<armorPenetrationSharp>2.0</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="pphhyy_BoomChuckerMKII"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.45</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
 	</Operation>
 
 </Patch>

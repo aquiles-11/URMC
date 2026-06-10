@@ -60,7 +60,7 @@
       </li>
     </tools>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -148,7 +148,7 @@
       </li>
     </tools>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -236,7 +236,7 @@
       </li>
     </tools>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -338,7 +338,7 @@
       </li>
     </tools>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -427,7 +427,7 @@
       </li>
     </tools>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -515,7 +515,7 @@
       </li>
     </tools>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -603,7 +603,7 @@
       </li>
     </tools>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -705,7 +705,7 @@
       </li>
     </tools>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -771,7 +771,7 @@
       <li>Ranged</li>
     </weaponClasses>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -857,7 +857,7 @@
       <li>Ranged</li>
     </weaponClasses>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -943,7 +943,7 @@
       <li>Ranged</li>
     </weaponClasses>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1029,7 +1029,7 @@
       <li>Ranged</li>
     </weaponClasses>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1117,7 +1117,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1198,7 +1198,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1295,7 +1295,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1391,7 +1391,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1472,7 +1472,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1569,7 +1569,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCMarine</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1650,7 +1650,7 @@
       <li>pphhyy_TorchSpikeMKI</li>
     </weaponTags>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCRecon</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1727,7 +1727,7 @@
       <li>pphhyy_TorchSpikeMKII</li>
     </weaponTags>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCRecon</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1821,7 +1821,7 @@
       <li>pphhyy_TorchSpikeMKIII</li>
     </weaponTags>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCRecon</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -1923,7 +1923,7 @@
       <pphhyy_Scrap>1</pphhyy_Scrap>
     </costList>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCRecon</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -2003,7 +2003,7 @@
       <pphhyy_BreakerMKI>1</pphhyy_BreakerMKI>
     </costList>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCRecon</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -2083,7 +2083,7 @@
       <pphhyy_BreakerMKII>1</pphhyy_BreakerMKII>
     </costList>
     <recipeMaker>
-      <researchPrerequisite>pphhyy_URMCRecon</researchPrerequisite>
+      <researchPrerequisite>pphhyy_RaiderTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>

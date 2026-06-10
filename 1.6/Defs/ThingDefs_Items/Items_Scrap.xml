@@ -8,7 +8,7 @@
         <label>scrap</label>
         <description>PLACEHOLDER</description>
         <graphicData>
-          <texPath>Resources/Grenade</texPath>
+          <texPath>Resources/Scrap</texPath>
           <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <smeltable>false</smeltable>

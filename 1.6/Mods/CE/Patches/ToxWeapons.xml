@@ -10,19 +10,13 @@
 
                 <li Class="PatchOperationRemove">
                     <xpath>
-                        Defs/ThingDef[
-                        defName="pphhyy_M43ToxPulseRifle" or
-                        defName="pphhyy_M52HToxShotgun" or
-                        defName="pphhyy_M10RLSadarTox" or
-                        defName="pphhyy_M80GLToxMachine"
+                        Defs/ThingDef[ defName="pphhyy_M43ToxPulseRifle" or defName="pphhyy_M52HToxShotgun" or defName="pphhyy_M10RLSadarTox" or defName="pphhyy_M80GLToxMachine"
                         ]
                     </xpath>
                 </li>
 
-                <li
-                    Class="PatchOperationRemove">
-                    <xpath>
-                        Defs/AbilityDef[defName="PulseRifleGrenadeToxic"]
+                <li Class="PatchOperationRemove">
+                    <xpath> Defs/AbilityDef[defName="PulseRifleGrenadeToxic"]
                     </xpath>
                 </li>
 
@@ -67,8 +61,7 @@
                     </value>
                 </li>
 
-                <li
-                    Class="PatchOperationAdd">
+                <li Class="PatchOperationAdd">
                     <xpath>Defs/ThingDef[defName="pphhyy_S12ToxMachete"]/statBases</xpath>
                     <value>
                         <Bulk>8</Bulk>
@@ -76,8 +69,7 @@
                     </value>
                 </li>
 
-                <li
-                    Class="PatchOperationAdd">
+                <li Class="PatchOperationAdd">
                     <xpath>Defs/ThingDef[defName="pphhyy_S12ToxMachete"]</xpath>
                     <value>
                         <equippedStatOffsets>
@@ -85,6 +77,55 @@
                             <MeleeParryChance>0.6</MeleeParryChance>
                             <MeleeDodgeChance>0.4</MeleeDodgeChance>
                         </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="pphhyy_NuclearHammer"]/tools</xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>handle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>6</power>
+                                <cooldownTime>1.6</cooldownTime>
+                                <chanceFactor>0.10</chanceFactor>
+                                <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>head</label>
+                                <capacities>
+                                    <li>pphhyy_ToxBlunt</li>
+                                </capacities>
+                                <power>33</power>
+                                <cooldownTime>2.1</cooldownTime>
+                                <armorPenetrationBlunt>6.5</armorPenetrationBlunt>
+                                <armorPenetrationSharp>3.0</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="pphhyy_NuclearHammer"]/statBases</xpath>
+                    <value>
+                        <Bulk>13</Bulk>
+			<MeleeCounterParryBonus>0.9</MeleeCounterParryBonus>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="pphhyy_NuclearHammer"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+				<MeleeCritChance>0.55</MeleeCritChance>
+				<MeleeParryChance>0.5</MeleeParryChance>
+				<MeleeDodgeChance>0.35</MeleeDodgeChance>
+			</equippedStatOffsets>
                     </value>
                 </li>
 

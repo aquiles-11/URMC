@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+	<!-- Skull Pile -->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>pphhyy_SkullPileI</defName>
+		<label>First Skull Pile</label>
+		<description>An art piece that can keep being remade to add more skulls.
+This one is proper art that gets placed.</description>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<pathCost>14</pathCost>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<designationCategory>Furniture</designationCategory>
+		<rotatable>true</rotatable>
+		<size>(1,1)</size>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Building/SkullPiles/FirstSkullPile</texPath>
+			<drawSize>(2.9,2.9)</drawSize>
+			<drawOffset>(0,0,0.7)</drawOffset>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Mass>3</Mass>
+            <TerrorSource>25</TerrorSource>
+		</statBases>
+		<researchPrerequisites>
+			<li>pphhyy_RaiderTech</li>
+		</researchPrerequisites>
+		<uiIconScale>0.4</uiIconScale>
+		<costList>
+			<Skull>1</Skull>
+			<pphhyy_Scrap>1</pphhyy_Scrap>
+		</costList>
+	</ThingDef>
+
+<!-- Skull Pile 2 -->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>pphhyy_SkullPileII</defName>
+		<label>Double Kill Pile</label>
+		<description>An art piece that can keep being remade to add more skulls.
+This one is proper art that gets placed.</description>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<pathCost>14</pathCost>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<designationCategory>Furniture</designationCategory>
+		<rotatable>false</rotatable>
+        <defaultPlacingRot>South</defaultPlacingRot>
+		<size>(1,1)</size>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Building/SkullPiles/DoublekillPile</texPath>
+			<drawSize>(2.9,2.9)</drawSize>
+			<drawOffset>(0,0,0.7)</drawOffset>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Mass>3</Mass>
+            <TerrorSource>35</TerrorSource>
+		</statBases>
+		<researchPrerequisites>
+			<li>pphhyy_RaiderTech</li>
+		</researchPrerequisites>
+		<uiIconScale>0.4</uiIconScale>
+		<costList>
+			<Skull>1</Skull>
+			<pphhyy_SkullPileI>1</pphhyy_SkullPileI>
+		</costList>
+	</ThingDef>
+
+<!-- Overkill Pile -->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>pphhyy_SkullPileIII</defName>
+		<label>Overkill Pile</label>
+		<description>An art piece that can keep being remade to add more skulls.
+This one is proper art that gets placed.</description>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<pathCost>14</pathCost>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<designationCategory>Furniture</designationCategory>
+		<rotatable>false</rotatable>
+        <defaultPlacingRot>South</defaultPlacingRot>
+		<size>(1,1)</size>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Building/SkullPiles/OverkillPile</texPath>
+			<drawSize>(2.9,2.9)</drawSize>
+			<drawOffset>(0,0,0.7)</drawOffset>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Mass>3</Mass>
+            <TerrorSource>45</TerrorSource>
+		</statBases>
+		<researchPrerequisites>
+			<li>pphhyy_RaiderTech</li>
+		</researchPrerequisites>
+		<uiIconScale>0.4</uiIconScale>
+		<costList>
+			<Skull>2</Skull>
+			<pphhyy_SkullPileI>1</pphhyy_SkullPileI>
+            <pphhyy_Scrap>1</pphhyy_Scrap>
+		</costList>
+	</ThingDef>
+
+<!-- Killtrocity pile -->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>pphhyy_SkullPileIV</defName>
+		<label>Killtrocity Pile</label>
+		<description>An art piece that can keep being remade to add more skulls.
+This one is proper art that gets placed.</description>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<pathCost>14</pathCost>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<designationCategory>Furniture</designationCategory>
+		<rotatable>false</rotatable>
+        <defaultPlacingRot>South</defaultPlacingRot>
+		<size>(1,1)</size>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Building/SkullPiles/KilltrocityPile</texPath>
+			<drawSize>(2.9,2.9)</drawSize>
+			<drawOffset>(0,0,0.7)</drawOffset>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Mass>3</Mass>
+            <TerrorSource>55</TerrorSource>
+		</statBases>
+		<researchPrerequisites>
+			<li>pphhyy_RaiderTech</li>
+		</researchPrerequisites>
+		<uiIconScale>0.4</uiIconScale>
+		<costList>
+			<Skull>2</Skull>
+			<pphhyy_SkullPileIII>1</pphhyy_SkullPileIII>
+            <pphhyy_Scrap>1</pphhyy_Scrap>
+		</costList>
+	</ThingDef>
+
+<!-- Killimanjaro Pile -->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>pphhyy_SkullPileV</defName>
+		<label>Killimanjaro Pile</label>
+		<description>An art piece that can keep being remade to add more skulls.
+This one is proper art that gets placed.</description>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<pathCost>14</pathCost>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<designationCategory>Furniture</designationCategory>
+		<rotatable>false</rotatable>
+        <defaultPlacingRot>South</defaultPlacingRot>
+		<size>(1,1)</size>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Building/SkullPiles/KillimanjaroPile</texPath>
+			<drawSize>(2.9,2.9)</drawSize>
+			<drawOffset>(0,0,0.7)</drawOffset>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Mass>3</Mass>
+            <TerrorSource>65</TerrorSource>
+		</statBases>
+		<researchPrerequisites>
+			<li>pphhyy_RaiderTech</li>
+		</researchPrerequisites>
+		<uiIconScale>0.4</uiIconScale>
+		<costList>
+			<Skull>2</Skull>
+			<pphhyy_SkullPileIV>1</pphhyy_SkullPileIV>
+		</costList>
+	</ThingDef>
+
+<!-- Killtrastophe Pile -->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>pphhyy_SkullPileVI</defName>
+		<label>Killtastrophe Pile</label>
+		<description>An art piece that can keep being remade to add more skulls.
+This one is proper art that gets placed.</description>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<pathCost>14</pathCost>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<designationCategory>Furniture</designationCategory>
+		<rotatable>false</rotatable>
+        <defaultPlacingRot>South</defaultPlacingRot>
+		<size>(1,1)</size>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Building/SkullPiles/KilltastrophePile</texPath>
+			<drawSize>(2.9,2.9)</drawSize>
+			<drawOffset>(0,0,0.7)</drawOffset>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Mass>3</Mass>
+            <TerrorSource>75</TerrorSource>
+		</statBases>
+		<researchPrerequisites>
+			<li>pphhyy_RaiderTech</li>
+		</researchPrerequisites>
+		<uiIconScale>0.4</uiIconScale>
+		<costList>
+			<Skull>2</Skull>
+			<pphhyy_SkullPileV>1</pphhyy_SkullPileV>
+		</costList>
+	</ThingDef>
+
+<!-- Killpocalypse Pile -->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>pphhyy_SkullPileVII</defName>
+		<label>Killpocalypse Pile</label>
+		<description>An art piece that can keep being remade to add more skulls.
+This one is proper art that gets placed.</description>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<pathCost>14</pathCost>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<designationCategory>Furniture</designationCategory>
+		<rotatable>false</rotatable>
+        <defaultPlacingRot>South</defaultPlacingRot>
+		<size>(1,1)</size>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Building/SkullPiles/KillpocalypsePile</texPath>
+			<drawSize>(2.9,2.9)</drawSize>
+			<drawOffset>(0,0,0.7)</drawOffset>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Mass>3</Mass>
+            <TerrorSource>115</TerrorSource>
+		</statBases>
+		<researchPrerequisites>
+			<li>pphhyy_RaiderTech</li>
+		</researchPrerequisites>
+		<uiIconScale>0.4</uiIconScale>
+		<costList>
+			<Skull>6</Skull>
+			<pphhyy_SkullPileVI>1</pphhyy_SkullPileVI>
+		</costList>
+	</ThingDef>
+
+</Defs>
