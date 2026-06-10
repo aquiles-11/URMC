@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<Defs>
+
+    <!--__________ Factions __________-->
+
+    <!-- URMC -->
+
+    <FactionDef ParentName="FactionBase">
+        <defName>pphhyy_Faction_Raiders</defName>
+        <label>Marine Raiders</label>
+        <description>PLACEHOLDER.</description>
+        <!-- <royalTitleTags>
+            <li>pphhyy_Title_URMC</li>
+        </royalTitleTags>
+        <royalFavorLabel>Service Points</royalFavorLabel>
+        <royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
+        <royalTitleInheritanceRelations>
+        </royalTitleInheritanceRelations> -->
+        <colorSpectrum>
+            <li>(1, 1, 1)</li>
+        </colorSpectrum>
+        <fixedLeaderKinds>
+			<li>pphhyy_Tyrant</li>
+		</fixedLeaderKinds>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+        <pawnSingular>Raider</pawnSingular>
+        <pawnsPlural>Raiders</pawnsPlural>
+        <categoryTag>URMC_Adult</categoryTag>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <naturalEnemy>false</naturalEnemy>
+        <canSiege>true</canSiege>
+        <canStageAttacks>true</canStageAttacks>
+        <leaderTitle>officer</leaderTitle>
+        <factionIconPath>UI/URMCFactionIcon</factionIconPath>
+        <techLevel>Spacer</techLevel>
+        <fixedName>URMC</fixedName>
+        <settlementNameMaker>NamerSettlementEmpire</settlementNameMaker>
+        <allowedCultures>
+            <li>Astropolitan</li>
+        </allowedCultures>
+
+        <!--__________ Ideology __________-->
+
+        <fixedIdeo>true</fixedIdeo>
+        <ideoName>Marine Marauders</ideoName>
+        <ideoDescription>PLACEHOLDER</ideoDescription>
+        <forcedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+            <!-- Memes -->
+        </forcedMemes>
+        <requiredPreceptsOnly>true</requiredPreceptsOnly>
+
+        <!--__________ Biotech __________-->
+
+        <xenotypeSet>
+            <xenotypeChances>
+                <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+                <Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+                <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+                <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+                <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+                <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+                <Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+                <Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
+                <Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
+                <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
+            </xenotypeChances>
+        </xenotypeSet>
+
+        <!--__________ Backstories __________-->
+        
+        <backstoryFilters>
+            <li>
+                <categoriesChildhood>
+                    <li>Offworld</li>
+                  </categoriesChildhood>
+                <categoriesAdulthood>
+                    <li>URMC_Adult</li>
+                </categoriesAdulthood>
+                <commonality>1</commonality>
+            </li>
+        </backstoryFilters>
+
+        <!--__________ Kinds __________-->
+
+        <!-- Caravan Trader Kinds -->
+        
+        <caravanTraderKinds>
+            <li>Caravan_Raider_Trader</li>
+        </caravanTraderKinds>
+
+        <!-- Vistor Trader Kinds -->
+        
+        <visitorTraderKinds>
+            <li>Visitor_Raider_Trader</li>
+        </visitorTraderKinds>
+
+        <!-- Base Trader Kinds -->
+        
+        <baseTraderKinds>
+            <li>Base_Raider_Trader</li>
+        </baseTraderKinds>
+
+        <!-- Trader Kind Arrival Options -->
+        
+        <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+        <raidLootMaker>pphhyy_MaraudersRaidLootMaker</raidLootMaker>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+
+        <!--__________ Group Makers __________-->
+        
+        <pawnGroupMakers>
+
+            <!-- URMC Marines -->
+
+            <li>
+                <!-- Torch Group -->
+                <kindDef>Combat</kindDef>
+                <disallowedStrategies>
+                    <li>EmergeFromWater</li>
+                    <li>Siege</li>
+                    <li>StageThenAttack</li>
+                    <li>ImmediateAttackFriendly</li>
+                    <li MayRequire="ludeon.rimworld.anomaly">PsychicRitualSiege</li>
+                    <li MayRequire="ludeon.rimworld.anomaly">ShamblerAssault</li>
+                    <li>ImmediateAttackBreaching</li>
+                    <li>ImmediateAttackBreachingSmart</li>
+                </disallowedStrategies>
+                <options>
+                    <pphhyy_TorchRat>12</pphhyy_TorchRat>
+                    <pphhyy_Scorcher>4</pphhyy_Scorcher>
+                </options>
+            </li>
+
+            <li>
+                <!-- Raiding Group -->
+                <kindDef>Combat</kindDef>
+                <disallowedStrategies>
+                    <li>EmergeFromWater</li>
+                </disallowedStrategies>
+                <options>
+                    <pphhyy_Raider>14</pphhyy_Raider>
+                    <pphhyy_Crippler>4</pphhyy_Crippler>
+                    <pphhyy_Reaver>6</pphhyy_Reaver>
+                    <pphhyy_Boomer>4</pphhyy_Boomer>
+                </options>
+            </li>
+
+            <li>
+                <!-- Scouting Group -->
+                <kindDef>Combat</kindDef>
+                <disallowedStrategies>
+                    <li>EmergeFromWater</li>
+                </disallowedStrategies>
+                <options>
+                    <pphhyy_Scrapper>14</pphhyy_Scrapper>
+                    <pphhyy_Crippler>2</pphhyy_Crippler>
+                    <pphhyy_Reaver>8</pphhyy_Reaver>
+                </options>
+            </li>
+
+            <li>
+                <!-- Tyrant Group -->
+                <kindDef>Combat</kindDef>
+                <disallowedStrategies>
+                    <li>EmergeFromWater</li>
+                </disallowedStrategies>
+                <options>
+                    <pphhyy_Scrapper>6</pphhyy_Scrapper>
+                    <pphhyy_Raider>14</pphhyy_Raider>
+                    <pphhyy_Crippler>6</pphhyy_Crippler>
+                    <pphhyy_Reaver>6</pphhyy_Reaver>
+                    <pphhyy_Boomer>2</pphhyy_Boomer>
+                    <pphhyy_Tyrant>1</pphhyy_Tyrant>
+                    <pphhyy_TorchRat>2</pphhyy_TorchRat>
+                </options>
+            </li>
+
+            <li>
+                <!-- Breach Group -->
+                <kindDef>Combat</kindDef>
+                <disallowedStrategies>
+                    <li>EmergeFromWater</li>
+                    <li>Siege</li>
+                    <li>StageThenAttack</li>
+                    <li>ImmediateAttackFriendly</li>
+                    <li>ImmediateAttack</li>
+                    <li MayRequire="ludeon.rimworld.anomaly">PsychicRitualSiege</li>
+                    <li MayRequire="ludeon.rimworld.anomaly">ShamblerAssault</li>
+                </disallowedStrategies>
+                <options>
+                    <pphhyy_Raider>12</pphhyy_Raider>
+                    <pphhyy_Reaver>6</pphhyy_Reaver>
+                    <pphhyy_Marauder>2</pphhyy_Marauder>
+                </options>
+            </li>
+
+            <!--__________ URMC Traders __________-->
+
+            <!-- URMC Caravan -->
+
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <pphhyy_Marauder>1</pphhyy_Marauder>
+                </traders>
+                <carriers>
+                    <Alpaca>2</Alpaca>
+                </carriers>
+                <guards>
+                    <pphhyy_Raider>15</pphhyy_Raider>
+                    <pphhyy_Reaver>5</pphhyy_Reaver>
+                </guards>
+            </li>
+
+            <!-- URMC Settlement -->
+
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <pphhyy_Raider>15</pphhyy_Raider>
+                    <pphhyy_Reaver>10</pphhyy_Reaver>
+                    <pphhyy_Scrapper>4</pphhyy_Scrapper>
+                    <pphhyy_Tyrant>1</pphhyy_Tyrant>
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <settlementTexturePath>UI/URMCFactionIcon</settlementTexturePath>
+
+        <modExtensions>
+            <li Class="URMC.ModExt_FactionRaidControl">
+                <mandatoryRaidPawnKinds>
+                    <li>
+                        <pawnKind>pphhyy_Enforcer</pawnKind>
+                        <count>3</count>
+                    </li>
+                </mandatoryRaidPawnKinds>
+            </li>
+        </modExtensions>
+    </FactionDef>
+
+    <ThingSetMakerDef>
+        <defName>pphhyy_MaraudersRaidLootMaker</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>Silver</li>
+                        <li>MedicineIndustrial</li>
+                        <li>ComponentIndustrial</li>
+                        <li>MealSurvivalPack</li>
+                        <li>Neutroamine</li>
+                    </thingDefs>
+                </filter>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+</Defs>

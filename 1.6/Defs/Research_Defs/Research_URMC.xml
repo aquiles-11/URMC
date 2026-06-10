@@ -82,6 +82,18 @@
         <researchViewY>4.00</researchViewY>
     </ResearchProjectDef>
     
-
+<ResearchProjectDef>
+        <defName>pphhyy_RaiderTech</defName>
+        <label>raider tech</label>
+        <description>The crude Tech of the Marine Marauders.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <tab>pphhyy_URMC</tab>
+        <prerequisites>
+            <li>Machining</li>
+        </prerequisites>
+        <researchViewX>0</researchViewX>
+        <researchViewY>2.0</researchViewY>
+    </ResearchProjectDef>
 
 </Defs>

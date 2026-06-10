@@ -132,8 +132,8 @@
     <description>PLACEHOLDER</description>
     <isPlayer>true</isPlayer>
     <basicMemberKind>Colonist</basicMemberKind>
-    <pawnSingular>colonist</pawnSingular>
-    <pawnsPlural>colonists</pawnsPlural>
+    <pawnSingular>marine</pawnSingular>
+    <pawnsPlural>marines</pawnsPlural>
     <techLevel>Spacer</techLevel>
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
@@ -248,8 +248,8 @@
     <description>Pissed off Marine Survivor</description>
     <isPlayer>true</isPlayer>
     <basicMemberKind>Colonist</basicMemberKind>
-    <pawnSingular>colonist</pawnSingular>
-    <pawnsPlural>colonists</pawnsPlural>
+    <pawnSingular>marine</pawnSingular>
+    <pawnsPlural>marines</pawnsPlural>
     <techLevel>Spacer</techLevel>
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
@@ -278,6 +278,146 @@
     </apparelStuffFilter>
   </FactionDef>
 
+<ScenarioDef ParentName="ScenarioBase">
+    <defName>pphhyy_MarineMarauderStart</defName>
+    <label>Marine Marauder Start</label>
+    <description>Abandoned on a far rimworld these marines had to resort to piracy and raiding to survive. Having to scavenge for gear has made most of their armaments crude.</description>
+    <scenario>
+      <summary>Group of ultimate bad asses who also are marauders.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>pphhyy_MarauderStart</factionDef>
+      </playerFaction>
+      <parts>
 
+        <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          <pawnCount>3</pawnCount>
+        </li>
+
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>DropPods</method>
+        </li>
+
+        <!-- Player starting stuff -->
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>pphhyy_HewerMKI</thingDef>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>pphhyy_ChuckerMKI</thingDef>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>pphhyy_ChopperMKI</thingDef>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>pphhyy_M50XReconRifle</thingDef>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>pphhyy_ScrapperArmor</thingDef>
+          <count>3</count>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>pphhyy_ScrapperArmor</thingDef>
+          <count>3</count>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineIndustrial</thingDef>
+          <count>10</count>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>20</count>
+        </li>
+
+        <!-- Starting research -->
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>pphhyy_RaiderTech</project>
+        </li>
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>Group of ultimate bad asses who also are marauders.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>pphhyy_MarauderStart</defName>
+    <label>Marauders</label>
+    <description>PLACEHOLDER</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Colonist</basicMemberKind>
+    <pawnSingular>marauder</pawnSingular>
+    <pawnsPlural>marauders</pawnsPlural>
+    <techLevel>Spacer</techLevel>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <allowedCultures>
+      <li>Rustican</li>
+    </allowedCultures>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>UI/URMCFactionIcon</factionIconPath>
+    <permanentEnemyToEveryoneExcept>
+      <li>OutlanderCivil</li>
+      <li>TribeCivil</li>
+      <li>PlayerTribe</li>
+      <li>PlayerColony</li>
+      <li>Ancients</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Beggars</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">ResearchExpedition</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">GravshipCrew</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">TradersGuild</li>
+      <li>pphhyy_Faction_Raiders</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">TribeRoughNeanderthal</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">PirateYttakin</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">TribeSavageImpid</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">OutlanderRoughPig</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">PirateWaster</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Sanguophages</li>
+    </permanentEnemyToEveryoneExcept>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStart</li>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
 
 </Defs>
